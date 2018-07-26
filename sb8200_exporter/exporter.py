@@ -3,7 +3,7 @@ import http.server
 
 import prometheus_client
 
-import sb6183_exporter
+import sb8200_exporter
 
 
 def main():
@@ -15,7 +15,7 @@ def main():
 
     args = parser.parse_args()
 
-    collector = sb6183_exporter.Collector(args.address)
+    collector = sb8200_exporter.Collector(args.address)
 
     prometheus_client.REGISTRY.register(collector)
 

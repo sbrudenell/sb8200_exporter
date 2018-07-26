@@ -2,7 +2,7 @@ import setuptools
 
 
 setuptools.setup(
-    name="sb6183_exporter",
+    name="sb8200_exporter",
     version="0.0.1",
     author="Steven Brudenell",
     author_email="steven.brudenell@gmail.com",
@@ -14,7 +14,7 @@ setuptools.setup(
     ],
     entry_points={
         "console_scripts": [
-            "sb6183_exporter = sb6183_exporter:exporter_main",
+            "sb8200_exporter = sb8200_exporter:exporter_main",
         ],
     },
 )

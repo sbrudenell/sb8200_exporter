@@ -18,10 +18,12 @@ class Collector(object):
 
     def __init__(self, address):
         self.address = address
-        self._prefix = "sb6183_"
+        self._prefix = "sb8200_"
 
     def headerify(self, text):
-        return text.strip().lower().replace(" ", "_")
+        text = text.strip().lower()
+        text = re.sub(r"[^a-z0-9]", "_", text)
+        return text
 
     def parse_table(self, table):
         result = []
@@ -98,13 +100,13 @@ class Collector(object):
             elif title == "Downstream Bonded Channels":
                 metrics.extend(self.make_table_metrics(
                     rows, self._prefix + "downstream_",
-                    set(("channel", "frequency")),
+                    set(("channel_id", "frequency")),
                     self._DOWNSTREAM_HEADER_DISCRETE,
                     self._DOWNSTREAM_HEADER_COUNTER))
             elif title == "Upstream Bonded Channels":
                 metrics.extend(self.make_table_metrics(
                     rows, self._prefix + "upstream_",
-                    set(("channel", "frequency")),
+                    set(("channel_id", "frequency")),
                     self._UPSTREAM_HEADER_DISCRETE,
                     self._UPSTREAM_HEADER_COUNTER))
             else:
