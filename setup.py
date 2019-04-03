@@ -11,6 +11,7 @@ setuptools.setup(
         "requests>=2.18.4",
         "beautifulsoup4>=4.6.0",
         "prometheus_client>=0.2.0",
+        "html5lib>=1.0.1",
     ],
     entry_points={
         "console_scripts": [

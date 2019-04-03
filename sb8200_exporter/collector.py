@@ -82,7 +82,7 @@ class Collector(object):
         r = requests.get(u)
         r.raise_for_status()
 
-        h = bs4.BeautifulSoup(r.text, "html.parser")
+        h = bs4.BeautifulSoup(r.text, "html5lib")
         global_state = {}
 
         for table in h.find_all("table"):
