@@ -10,7 +10,7 @@ import prometheus_client.core
 class Collector(object):
 
     SCHEME = "http"
-    PATH = "/"
+    PATH = "/cmconnectionstatus.html"
 
     _DOWNSTREAM_HEADER_DISCRETE = set(("frequency",))
     _DOWNSTREAM_HEADER_COUNTER = set(("corrected", "uncorrectables"))
