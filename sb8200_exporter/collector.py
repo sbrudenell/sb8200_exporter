@@ -9,8 +9,6 @@ import prometheus_client.core
 modem_pass = os.getenv('MODEM_PASS')
 
 def get_credential():
-    logging.info('Obtaining login session from modem')
-
     url = "https://192.168.100.1"
     username = "admin"
     password = modem_pass
@@ -22,28 +20,17 @@ def get_credential():
     token = username + ":" + password
     auth_hash = base64.b64encode(token.encode('ascii'))
     auth_url = url + '?' + auth_hash.decode()
-    logging.debug('auth_url: %s', auth_url)
 
     # This is going to respond with our "credential", which is a hash that we
     # have to send as a cookie with subsequent requests
     try:
         resp = requests.get(auth_url, headers=HEADERS, auth=(username, password), verify=verify_ssl)
-
-        if resp.status_code != 200:
-            logging.error('Error authenticating with %s', url)
-            logging.error('Status code: %s', resp.status_code)
-            logging.error('Reason: %s', resp.reason)
-            return None
-
         credential = resp.text
         resp.close()
     except Exception as exception:
-        logging.error(exception)
-        logging.error('Error authenticating with %s', url)
         return None
 
     if 'Password:' in credential:
-        logging.error('Authentication error, received login page.  Check username / password.  SB8200 has some kind of bug that can cause this after too many authentications, the only known fix is to reboot the modem.')
         return None
 
     return credential
