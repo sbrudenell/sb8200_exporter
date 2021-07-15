@@ -80,7 +80,7 @@ class Collector(object):
 
         u = urllib.parse.urlunparse((
             self.SCHEME, self.address, self.PATH, None, None, None))
-        r = requests.get(u)
+        r = requests.get(url=u, verify=False)
         r.raise_for_status()
 
         h = bs4.BeautifulSoup(r.text, "html5lib")
