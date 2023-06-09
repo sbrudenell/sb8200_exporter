@@ -23,7 +23,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - run: |
-        docker build -t core.harbor.v.gallis.cloud/${{ secrets.IMAGE_NAME }}:latest .
+        docker build --network=host -t core.harbor.v.gallis.cloud/${{ secrets.IMAGE_NAME }}:latest .
         docker push core.harbor.v.gallis.cloud/${{ secrets.IMAGE_NAME }}:latest
       
     - uses: 8398a7/action-slack@v3
