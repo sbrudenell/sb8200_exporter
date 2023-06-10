@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sb8200-exporter
+  namespace: metrics
+  labels:
+    app.kubernetes.io/name: sb8200-exporter
+    app.kubernetes.io/instance: sb8200-exporter
+spec:
+  selector:
+    app.kubernetes.io/name: sb8200-exporter
+    app.kubernetes.io/instance: sb8200-exporter
+  ports:
+    - name: metrics
+      port: 9195

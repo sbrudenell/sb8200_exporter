@@ -1,0 +1,20 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: sb8200-exporter
+  namespace: metrics
+  labels:
+    app.kubernetes.io/name: sb8200-exporter
+    app.kubernetes.io/instance: sb8200-exporter
+    grafana_agent: 'true'
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: sb8200-exporter
+      app.kubernetes.io/instance: sb8200-exporter
+  endpoints:
+    - port: metrics
+      interval: 30ss
+      scrapeTimeout: 20s
+      path: /metrics
