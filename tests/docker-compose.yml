@@ -1,0 +1,22 @@
+services:
+  sb8200_exporter_test:
+    build: 
+      context: .
+    image: sb8200_exporter_test
+    container_name: sb8200_exporter_test
+    environment:
+      - MODEM_PASS={$MODEM_PASS}
+      - SELENIUM_DRIVER_URL=http://chrome_headless_test:4444
+      - SELENIUM_REMOTE=true
+    network_mode: host
+    ports:
+      - "9195:9195"
+    depends_on:
+      - chrome_headless_test
+
+  chrome_headless_test:
+    image: seleniarm/standalone-chromium
+    container_name: chrome_headless_test
+    network_mode: host
+    ports:
+      - "4444:4444"
