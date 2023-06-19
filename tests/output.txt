@@ -1,0 +1,374 @@
+Request:
+https://localhost:8080/cmconnectionstatus.html?ct_dFVS65XQZrt8UDXy3uRmeMyf8ndPJOs
+
+-------------------
+Startup Procedure
+-------------------
+
+Metric: Procedure
+Status: Status
+Comment: Comment
+---
+Metric: Acquire Downstream Channel
+Status: 567000000 Hz
+Comment: Locked
+---
+Metric: Connectivity State
+Status: OK
+Comment: Operational
+---
+Metric: Boot State
+Status: OK
+Comment: Operational
+---
+Metric: Configuration File
+Status: OK
+Comment: 
+---
+Metric: Security
+Status: Enabled
+Comment: BPI+
+---
+Metric: DOCSIS Network Access Enabled
+Status: Allowed
+Comment: 
+---
+
+-------------------
+Downstream Bonded Channels
+-------------------
+
+Channel ID: Channel ID
+Lock Status: Lock Status
+Modulation: Modulation
+Frequency: Frequency
+Power: Power
+SNR/MER: SNR/MER
+Corrected: Corrected
+Uncorrectables: Uncorrectables
+---
+Channel ID: 30
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 567000000 Hz
+Power: -6.0 dBmV
+SNR/MER: 40.3 dB
+Corrected: 1721
+Uncorrectables: 30
+---
+Channel ID: 1
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 393000000 Hz
+Power: -5.4 dBmV
+SNR/MER: 41.2 dB
+Corrected: 4
+Uncorrectables: 0
+---
+Channel ID: 2
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 399000000 Hz
+Power: -5.5 dBmV
+SNR/MER: 41.1 dB
+Corrected: 938
+Uncorrectables: 0
+---
+Channel ID: 3
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 405000000 Hz
+Power: -6.6 dBmV
+SNR/MER: 40.6 dB
+Corrected: 254
+Uncorrectables: 0
+---
+Channel ID: 4
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 411000000 Hz
+Power: -6.0 dBmV
+SNR/MER: 40.9 dB
+Corrected: 9
+Uncorrectables: 0
+---
+Channel ID: 5
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 417000000 Hz
+Power: -4.9 dBmV
+SNR/MER: 41.2 dB
+Corrected: 14
+Uncorrectables: 0
+---
+Channel ID: 6
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 423000000 Hz
+Power: -5.8 dBmV
+SNR/MER: 40.8 dB
+Corrected: 16
+Uncorrectables: 0
+---
+Channel ID: 7
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 429000000 Hz
+Power: -6.1 dBmV
+SNR/MER: 40.6 dB
+Corrected: 573
+Uncorrectables: 0
+---
+Channel ID: 8
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 435000000 Hz
+Power: -5.0 dBmV
+SNR/MER: 41.2 dB
+Corrected: 723
+Uncorrectables: 4
+---
+Channel ID: 9
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 441000000 Hz
+Power: -4.4 dBmV
+SNR/MER: 41.2 dB
+Corrected: 952
+Uncorrectables: 3
+---
+Channel ID: 10
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 447000000 Hz
+Power: -5.4 dBmV
+SNR/MER: 40.7 dB
+Corrected: 996
+Uncorrectables: 5
+---
+Channel ID: 11
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 453000000 Hz
+Power: -5.8 dBmV
+SNR/MER: 40.8 dB
+Corrected: 982
+Uncorrectables: 0
+---
+Channel ID: 12
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 459000000 Hz
+Power: -4.9 dBmV
+SNR/MER: 40.9 dB
+Corrected: 1052
+Uncorrectables: 8
+---
+Channel ID: 13
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 465000000 Hz
+Power: -4.6 dBmV
+SNR/MER: 41.1 dB
+Corrected: 1035
+Uncorrectables: 1
+---
+Channel ID: 14
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 471000000 Hz
+Power: -5.9 dBmV
+SNR/MER: 40.5 dB
+Corrected: 1099
+Uncorrectables: 4
+---
+Channel ID: 15
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 477000000 Hz
+Power: -5.4 dBmV
+SNR/MER: 40.6 dB
+Corrected: 1331
+Uncorrectables: 2
+---
+Channel ID: 16
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 483000000 Hz
+Power: -4.9 dBmV
+SNR/MER: 40.8 dB
+Corrected: 1082
+Uncorrectables: 6
+---
+Channel ID: 17
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 489000000 Hz
+Power: -4.7 dBmV
+SNR/MER: 41.0 dB
+Corrected: 1282
+Uncorrectables: 19
+---
+Channel ID: 18
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 495000000 Hz
+Power: -5.9 dBmV
+SNR/MER: 40.3 dB
+Corrected: 1416
+Uncorrectables: 13
+---
+Channel ID: 19
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 507000000 Hz
+Power: -5.6 dBmV
+SNR/MER: 39.1 dB
+Corrected: 22
+Uncorrectables: 0
+---
+Channel ID: 20
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 513000000 Hz
+Power: -5.6 dBmV
+SNR/MER: 40.1 dB
+Corrected: 144
+Uncorrectables: 23
+---
+Channel ID: 21
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 519000000 Hz
+Power: -6.3 dBmV
+SNR/MER: 39.8 dB
+Corrected: 1897
+Uncorrectables: 101
+---
+Channel ID: 22
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 525000000 Hz
+Power: -7.0 dBmV
+SNR/MER: 40.1 dB
+Corrected: 1952
+Uncorrectables: 478
+---
+Channel ID: 23
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 531000000 Hz
+Power: -7.9 dBmV
+SNR/MER: 39.8 dB
+Corrected: 2659
+Uncorrectables: 1342
+---
+Channel ID: 24
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 537000000 Hz
+Power: -7.9 dBmV
+SNR/MER: 39.9 dB
+Corrected: 3106
+Uncorrectables: 2532
+---
+Channel ID: 25
+Lock Status: Locked
+Modulation: Other
+Frequency: 690000000 Hz
+Power: -4.9 dBmV
+SNR/MER: 27.5 dB
+Corrected: 212728727
+Uncorrectables: 654
+---
+Channel ID: 26
+Lock Status: Not Locked
+Modulation: QAM256
+Frequency: 0 Hz
+Power: 0.0 dBmV
+SNR/MER: 39.3 dB
+Corrected: 2989
+Uncorrectables: 1867
+---
+Channel ID: 27
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 543000000 Hz
+Power: -8.6 dBmV
+SNR/MER: 40.2 dB
+Corrected: 2386
+Uncorrectables: 602
+---
+Channel ID: 28
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 549000000 Hz
+Power: -6.8 dBmV
+SNR/MER: 40.3 dB
+Corrected: 1787
+Uncorrectables: 138
+---
+Channel ID: 29
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 555000000 Hz
+Power: -6.7 dBmV
+SNR/MER: 40.5 dB
+Corrected: 1566
+Uncorrectables: 116
+---
+Channel ID: 31
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 561000000 Hz
+Power: -5.8 dBmV
+SNR/MER: 40.7 dB
+Corrected: 1594
+Uncorrectables: 19
+---
+Channel ID: 32
+Lock Status: Locked
+Modulation: QAM256
+Frequency: 573000000 Hz
+Power: -5.4 dBmV
+SNR/MER: 40.3 dB
+Corrected: 1488
+Uncorrectables: 32
+---
+
+-------------------
+Upstream Bonded Channels
+-------------------
+
+Channel: Channel
+Channel ID: Channel ID
+Lock Status: Lock Status
+Channel Type: US Channel Type
+Frequency: Frequency
+Width: Width
+Power: Power
+---
+Channel: 1
+Channel ID: 65
+Lock Status: Locked
+Channel Type: SC-QAM Upstream
+Frequency: 22800000 Hz
+Width: 6400000 Hz
+Power: 48.0 dBmV
+---
+Channel: 2
+Channel ID: 66
+Lock Status: Locked
+Channel Type: SC-QAM Upstream
+Frequency: 29200000 Hz
+Width: 6400000 Hz
+Power: 48.0 dBmV
+---
+Channel: 3
+Channel ID: 67
+Lock Status: Locked
+Channel Type: SC-QAM Upstream
+Frequency: 35600000 Hz
+Width: 6400000 Hz
+Power: 49.0 dBmV
+---
