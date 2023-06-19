@@ -13,7 +13,8 @@ services:
     depends_on:
       - chrome_headless
   chrome_headless:
-    image: seleniarm/standalone-chromium
+    #image: seleniarm/standalone-chromium   #ARM
+    image: selenium/standalone-chrome       #x64
     container_name: chrome_headless
     ports:
       - "4444:4444"
