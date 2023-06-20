@@ -1,9 +1,7 @@
 # sb8200_exporter
 A prometheus exporter for the Arris SB8200
 
-[![Docker Image CI](https://github.com/gallis-local/sb8200_exporter/actions/workflows/main.yml/badge.svg)](https://github.com/gallis-local/sb8200_exporter/actions/workflows/main.yml)
-
-Need to update to work with new Arris Login page, need to troubleshoot. Setup for automated build
+Need Setup for automated build - Now working with the latest Arris Login page
 
 **UNMAINTAINED**: I no longer have an SB8200 due to moving out of the service area where I could use one. Please follow a fork, or make your own!
 
@@ -12,7 +10,11 @@ Need to update to work with new Arris Login page, need to troubleshoot. Setup fo
 * Selenium WebDriver
 * Python 3
 
-The major update to this exporter is the requirement of an additional selenium webdriver container to properly scrape the metrics
+The "major" update to this exporter is the requirement of an additional selenium webdriver container or local runtime to properly scrape the metrics
+
+## Usage
+
+Fill out the required cli arguments or environment variables. The exporter will scrape the modem and expose the metrics on the port specified, utilzing the username and password to login via a session proxied by the Chrome webdriver.
 
 ## Tests
 
