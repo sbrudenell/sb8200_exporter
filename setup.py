@@ -1,6 +1,5 @@
 import setuptools
 
-
 setuptools.setup(
     name="sb8200_exporter",
     version="0.0.2",
@@ -19,4 +18,12 @@ setuptools.setup(
             "sb8200_exporter = sb8200_exporter:exporter_main",
         ],
     },
+    # Set the default pip timeout to 100 seconds
+    # This will apply to all pip commands run by setuptools
+    # including the install_requires packages
+    options={
+        "install": {
+            "default-timeout": 100
+        }
+    }
 )
