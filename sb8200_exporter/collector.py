@@ -75,7 +75,7 @@ class Collector(object):
     def collect(self):
         metrics = []
 
-        h = bs4.BeautifulSoup(utils.collect_modem_metrics_html(), "html5lib")
+        h = bs4.BeautifulSoup(utils.collect_modem_metrics_html(self.address), "html5lib")
         global_state = {}
 
         for table in h.find_all("table"):

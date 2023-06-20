@@ -13,7 +13,7 @@ selenium_remote = os.getenv('SELENIUM_REMOTE', 'true')
 selenium_driver_url = os.getenv('SELENIUM_DRIVER_URL', 'http://localhost:4444')
 
 # Collect the metrics from the modem - LOGIN REQUIRED via Selenium
-def collect_modem_metrics_html():
+def collect_modem_metrics_html(modem_url):
     url = modem_url
     username = modem_user
     password = modem_pass
