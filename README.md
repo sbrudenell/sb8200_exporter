@@ -3,7 +3,7 @@ A prometheus exporter for the Arris SB8200
 
 Need Setup for automated build - Now working with the latest Arris Login page
 
-**UNMAINTAINED**: I no longer have an SB8200 due to moving out of the service area where I could use one. Please follow a fork, or make your own!
+**UNMAINTAINED**: Updated 2023-06-19 - This was a one time update to ensure the login was functional and allows properly scraping metrics
 
 ## Requirements
 
@@ -19,3 +19,4 @@ Fill out the required cli arguments or environment variables. The exporter will 
 ## Tests
 
 Rewritten using selenium to properly login via updated JS method compared to previous. Working on integrating with Prometheus exporter. These are helpful for troubleshooting
+
