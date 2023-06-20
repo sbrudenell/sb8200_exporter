@@ -1,0 +1,762 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": 10,
+    "links": [],
+    "panels": [
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": "py_arris_exporter",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "gridPos": {
+          "h": 13,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "height": "450",
+        "hiddenSeries": false,
+        "id": 2,
+        "legend": {
+          "alignAsTable": true,
+          "avg": false,
+          "current": true,
+          "hideEmpty": false,
+          "hideZero": false,
+          "max": true,
+          "min": true,
+          "rightSide": false,
+          "show": true,
+          "sort": "min",
+          "sortDesc": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 2,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "dataLinks": []
+        },
+        "percentage": false,
+        "pointradius": 1,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [
+          {
+            "alias": "max",
+            "color": "#0A437C",
+            "fillBelowTo": "min",
+            "lines": false,
+            "zindex": -3
+          },
+          {
+            "alias": "min",
+            "lines": false
+          }
+        ],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "expr": "sb8200_downstream_power",
+            "interval": "",
+            "intervalFactor": 2,
+            "legendFormat": "Ch {{channel_id}} --- {{frequency}}",
+            "refId": "A"
+          }
+        ],
+        "thresholds": [
+          {
+            "colorMode": "critical",
+            "fill": true,
+            "line": true,
+            "op": "gt",
+            "value": 10,
+            "yaxis": "left"
+          },
+          {
+            "colorMode": "critical",
+            "fill": true,
+            "line": true,
+            "op": "lt",
+            "value": -10,
+            "yaxis": "left"
+          }
+        ],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Downstream Power",
+        "tooltip": {
+          "shared": true,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "transparent": true,
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "format": "dBm",
+            "label": "",
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          },
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": "py_arris_exporter",
+        "decimals": 2,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "align": null
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "gridPos": {
+          "h": 13,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        },
+        "hiddenSeries": false,
+        "id": 4,
+        "interval": "",
+        "legend": {
+          "alignAsTable": true,
+          "avg": false,
+          "current": true,
+          "hideEmpty": false,
+          "max": true,
+          "min": true,
+          "rightSide": false,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 2,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "dataLinks": []
+        },
+        "percentage": false,
+        "pluginVersion": "7.0.3",
+        "pointradius": 1,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [
+          {
+            "alias": "max",
+            "color": "#99440A",
+            "fillBelowTo": "min",
+            "lines": false,
+            "zindex": -3
+          },
+          {
+            "alias": "min",
+            "lines": false
+          },
+          {
+            "alias": "d-channel-max",
+            "color": "#58140C",
+            "fillBelowTo": "d-channel-min",
+            "lines": false,
+            "zindex": -3
+          },
+          {
+            "alias": "d-channel-min",
+            "lines": false
+          }
+        ],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "expr": "sb8200_downstream_snr_mer",
+            "format": "time_series",
+            "instant": false,
+            "interval": "",
+            "intervalFactor": 2,
+            "legendFormat": "ch {{channel_id}} --- {{frequency}}",
+            "refId": "A"
+          }
+        ],
+        "thresholds": [
+          {
+            "colorMode": "critical",
+            "fill": true,
+            "line": true,
+            "op": "lt",
+            "value": 30,
+            "yaxis": "left"
+          }
+        ],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Downstream SNR",
+        "tooltip": {
+          "shared": false,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "transparent": true,
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "format": "dBm",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          },
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": "py_arris_exporter",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "fill": 0,
+        "fillGradient": 0,
+        "gridPos": {
+          "h": 8,
+          "w": 11,
+          "x": 0,
+          "y": 13
+        },
+        "hiddenSeries": false,
+        "id": 10,
+        "legend": {
+          "alignAsTable": true,
+          "avg": false,
+          "current": true,
+          "max": true,
+          "min": true,
+          "rightSide": false,
+          "show": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 3,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "dataLinks": []
+        },
+        "percentage": false,
+        "pointradius": 1,
+        "points": true,
+        "renderer": "flot",
+        "seriesOverrides": [
+          {
+            "alias": "max",
+            "color": "#2F575E",
+            "fillBelowTo": "min",
+            "lines": false,
+            "zindex": -3
+          },
+          {
+            "alias": "min",
+            "lines": false
+          }
+        ],
+        "spaceLength": 10,
+        "stack": false,
+        "steppedLine": false,
+        "targets": [
+          {
+            "expr": "sum(sb8200_upstream_power) by (frequency)",
+            "interval": "",
+            "legendFormat": "{{frequency}}",
+            "refId": "A"
+          }
+        ],
+        "thresholds": [
+          {
+            "colorMode": "critical",
+            "fill": true,
+            "line": true,
+            "op": "gt",
+            "value": 52,
+            "yaxis": "left"
+          }
+        ],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Upstream Power",
+        "tooltip": {
+          "shared": true,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "transparent": true,
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "format": "dBm",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          },
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": "py_arris_exporter",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "fill": 4,
+        "fillGradient": 0,
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 11,
+          "y": 13
+        },
+        "hiddenSeries": false,
+        "id": 6,
+        "legend": {
+          "alignAsTable": true,
+          "avg": true,
+          "current": true,
+          "hideEmpty": false,
+          "hideZero": false,
+          "max": true,
+          "min": true,
+          "rightSide": false,
+          "show": true,
+          "sort": "max",
+          "sortDesc": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 2,
+        "links": [],
+        "nullPointMode": "null",
+        "options": {
+          "dataLinks": []
+        },
+        "percentage": false,
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [
+          {
+            "alias": "/d_29_corr/",
+            "color": "#70DBED",
+            "fill": 3,
+            "linewidth": 0
+          }
+        ],
+        "spaceLength": 10,
+        "stack": true,
+        "steppedLine": false,
+        "targets": [
+          {
+            "expr": "rate(sb8200_downstream_corrected_total[5m])",
+            "instant": false,
+            "interval": "",
+            "intervalFactor": 1,
+            "legendFormat": "Ch {{channel_id}} --- {{frequency}}",
+            "refId": "A"
+          }
+        ],
+        "thresholds": [],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Downstream Corrected Errors",
+        "tooltip": {
+          "shared": true,
+          "sort": 2,
+          "value_type": "individual"
+        },
+        "transformations": [],
+        "transparent": true,
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "format": "pps",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          },
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      },
+      {
+        "aliasColors": {},
+        "bars": false,
+        "dashLength": 10,
+        "dashes": false,
+        "datasource": "py_arris_exporter",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "fill": 4,
+        "fillGradient": 0,
+        "gridPos": {
+          "h": 8,
+          "w": 7,
+          "x": 17,
+          "y": 13
+        },
+        "hiddenSeries": false,
+        "id": 8,
+        "legend": {
+          "alignAsTable": true,
+          "avg": false,
+          "current": true,
+          "max": true,
+          "min": true,
+          "rightSide": false,
+          "show": true,
+          "sort": "max",
+          "sortDesc": true,
+          "total": false,
+          "values": true
+        },
+        "lines": true,
+        "linewidth": 2,
+        "links": [],
+        "nullPointMode": "connected",
+        "options": {
+          "dataLinks": []
+        },
+        "percentage": false,
+        "pointradius": 5,
+        "points": false,
+        "renderer": "flot",
+        "seriesOverrides": [],
+        "spaceLength": 10,
+        "stack": true,
+        "steppedLine": false,
+        "targets": [
+          {
+            "expr": "rate(sb8200_downstream_uncorrectables_total[5m])",
+            "interval": "",
+            "legendFormat": "Ch {{channel_id}} --- {{frequency}}",
+            "refId": "A"
+          }
+        ],
+        "thresholds": [],
+        "timeFrom": null,
+        "timeRegions": [],
+        "timeShift": null,
+        "title": "Downstream Uncorrectable Errors",
+        "tooltip": {
+          "shared": true,
+          "sort": 0,
+          "value_type": "individual"
+        },
+        "transparent": true,
+        "type": "graph",
+        "xaxis": {
+          "buckets": null,
+          "mode": "time",
+          "name": null,
+          "show": true,
+          "values": []
+        },
+        "yaxes": [
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": "0",
+            "show": true
+          },
+          {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+          }
+        ],
+        "yaxis": {
+          "align": false,
+          "alignLevel": null
+        }
+      },
+      {
+        "datasource": "py_arris_exporter",
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "align": null,
+              "displayMode": "auto"
+            },
+            "mappings": [
+              {
+                "from": "",
+                "id": 0,
+                "operator": "",
+                "text": "OK",
+                "to": "",
+                "type": 1,
+                "value": "1"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 5,
+          "y": 21
+        },
+        "id": 12,
+        "options": {
+          "showHeader": false
+        },
+        "pluginVersion": "7.0.3",
+        "targets": [
+          {
+            "expr": "sb8200_state",
+            "format": "table",
+            "interval": "",
+            "legendFormat": "",
+            "refId": "A"
+          }
+        ],
+        "timeFrom": null,
+        "timeShift": null,
+        "title": "Modem Status",
+        "transformations": [
+          {
+            "id": "reduce",
+            "options": {
+              "reducers": [
+                "last"
+              ]
+            }
+          },
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {
+                "Field": false
+              },
+              "indexByName": {
+                "Field": 0,
+                "Last": 1
+              },
+              "renameByName": {
+                "Field": "Status",
+                "Last": "Latest State"
+              }
+            }
+          },
+          {
+            "id": "filterFieldsByName",
+            "options": {
+              "include": {
+                "pattern": ""
+              }
+            }
+          }
+        ],
+        "type": "table"
+      }
+    ],
+    "refresh": false,
+    "schemaVersion": 25,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": [
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ]
+    },
+    "timezone": "",
+    "title": "Cable Modem",
+    "uid": "fm5SE7WMz",
+    "version": 23
+  }
