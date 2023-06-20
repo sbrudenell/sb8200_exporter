@@ -5,15 +5,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-modem_url = os.getenv('MODEM_URL', 'https://192.168.100.1/')
-modem_user = os.getenv('MODEM_USER', 'admin')
-modem_pass = os.getenv('MODEM_PASS')
-
-selenium_remote = os.getenv('SELENIUM_REMOTE', 'true')
-selenium_driver_url = os.getenv('SELENIUM_DRIVER_URL', 'http://localhost:4444')
-
 # Collect the metrics from the modem - LOGIN REQUIRED via Selenium
-def collect_modem_metrics_html(modem_url):
+def collect_modem_metrics_html(modem_url, modem_user, modem_pass, selenium_remote, selenium_driver_url):
     url = modem_url
     username = modem_user
     password = modem_pass
@@ -62,14 +55,15 @@ def collect_modem_metrics_html(modem_url):
         
         # Extract and print the available metrics
         soup = BeautifulSoup(driver.page_source, 'html.parser')
-    except Exception as e:
-        print("Error occurred during authentication:")
-        print(str(e))
-        return
-    finally:
         # Quit the WebDriver
         driver.quit()
         # Return the BeautifulSoup object containing the metrics
         return soup
+    except Exception as e:
+        print("Error occurred during authentication:")
+        print(str(e))
+        driver.quit()
+        return ""
+
     
 

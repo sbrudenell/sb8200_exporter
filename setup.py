@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name="sb8200_exporter",
-    version="0.0.1",
+    version="0.0.2",
     author="Steven Brudenell",
     author_email="steven.brudenell@gmail.com",
     packages=setuptools.find_packages(),

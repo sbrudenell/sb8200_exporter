@@ -1,4 +1,4 @@
-import re,
+import re
 import bs4
 import prometheus_client
 import prometheus_client.core
@@ -14,8 +14,12 @@ class Collector(object):
     _UPSTREAM_HEADER_DISCRETE = set(("frequency", "symbol_rate"))
     _UPSTREAM_HEADER_COUNTER = set(())
 
-    def __init__(self, address):
+    def __init__(self, address, user, password, selenium_remote, selenium_driver_url):
         self.address = address
+        self.username = user
+        self.password = password
+        self.selenium_remote = selenium_remote
+        self.selenium_driver_url = selenium_driver_url
         self._prefix = "sb8200_"
 
     def headerify(self, text):
@@ -75,7 +79,7 @@ class Collector(object):
     def collect(self):
         metrics = []
 
-        h = bs4.BeautifulSoup(utils.collect_modem_metrics_html(self.address), "html5lib")
+        h = bs4.BeautifulSoup(utils.collect_modem_metrics_html(self.address, self.username, self.password, self.selenium_remote, self.selenium_driver_url).prettify(), "html5lib")
         global_state = {}
 
         for table in h.find_all("table"):
