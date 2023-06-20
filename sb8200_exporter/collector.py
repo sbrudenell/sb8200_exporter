@@ -1,40 +1,9 @@
 import re, os, base64
-import urllib.parse
 
 import bs4
-import requests
 import prometheus_client
 import prometheus_client.core
-
-modem_pass = os.getenv('MODEM_PASS')
-
-def get_credential():
-    url = "https://192.168.100.1"
-    username = "admin"
-    password = modem_pass
-    verify_ssl = False
-
-    # We have to send a request with the username and password
-    # encoded as a url param.  Look at the Javascript from the
-    # login page for more info on the following.
-    token = username + ":" + password
-    auth_hash = base64.b64encode(token.encode('ascii'))
-    auth_url = url + '?' + auth_hash.decode()
-
-    # This is going to respond with our "credential", which is a hash that we
-    # have to send as a cookie with subsequent requests
-    try:
-        resp = requests.get(auth_url, headers=HEADERS, auth=(username, password), verify=verify_ssl)
-        credential = resp.text
-        resp.close()
-    except Exception as exception:
-        return None
-
-    if 'Password:' in credential:
-        return None
-
-    return credential
-
+from . import utils
 
 class Collector(object):
 
@@ -107,16 +76,7 @@ class Collector(object):
     def collect(self):
         metrics = []
 
-        u = urllib.parse.urlunparse((
-            self.SCHEME, self.address, self.PATH, None, None, None))
-        
-        credential = get_credential()
-        cookies = {'credential': credential}
-        
-        r = requests.get(url=u, verify=False, cookies=cookies)
-        r.raise_for_status()
-
-        h = bs4.BeautifulSoup(r.text, "html5lib")
+        h = bs4.BeautifulSoup(utils.collect_modem_metrics_html(), "html5lib")
         global_state = {}
 
         for table in h.find_all("table"):
