@@ -24,6 +24,12 @@ spec:
         prometheus.io/port: "monitoring"
     spec:
       containers:
+        - name: webdriver
+          image: selenium/standalone-chrome
+          ports:
+            - name: http
+              containerPort: 4444
+          resources: {}
         - name: sb8200-exporter
           image: sb8200_exporter:latest
           env:
