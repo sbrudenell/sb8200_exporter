@@ -1,5 +1,4 @@
-import re, os, base64
-
+import re,
 import bs4
 import prometheus_client
 import prometheus_client.core
